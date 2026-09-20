@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="86dp"
+    android:layout_marginBottom="9dp"
+    android:background="@drawable/bg_leaderboard_row"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <TextView
+        android:id="@+id/txtRank"
+        android:layout_width="37dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="#4"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/bg_leaderboard_avatar"
+        android:gravity="center"
+        android:text="JT"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtAthleteName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jordan T."
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAthleteStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="172.4 km • 24 activities"
+            android:textColor="#A39CB8"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/txtXp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="🔥 2,900 XP"
+            android:textColor="#D6D1E2"
+            android:textSize="8sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnFollow"
+        android:layout_width="75dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_leaderboard_follow"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="FOLLOW"
+        android:textColor="#FFFFFF"
+        android:textSize="7sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

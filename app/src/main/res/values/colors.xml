@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="leaderboard_tab_inactive">#AAA2C6</color>
+    <color name="create_group_inactive">#9A94AC</color>
 </resources>

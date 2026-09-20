@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="MotionX"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MotionX">
+
+        <!-- SETTINGS -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <!-- HOME / DASHBOARD -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <!-- LOGIN -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- REGISTER -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- WELCOME / LAUNCH SCREEN -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,17 +40,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ProfileActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".CommunityActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".ChallengesActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FollowingActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DiscoverAthletesActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".LeaderboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GroupsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateGroupActivity"
+            android:exported="false" />
     </application>
+
 
 </manifest>

@@ -5,13 +5,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_home">
+    android:background="#070816">
+
+    <!-- ================= MAIN DASHBOARD ================= -->
 
     <ScrollView
+        android:id="@+id/dashboardScroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fillViewport="true"
         android:clipToPadding="false"
+        android:fillViewport="true"
         android:overScrollMode="never"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,40 +25,82 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingStart="22dp"
-            android:paddingTop="42dp"
-            android:paddingEnd="22dp"
-            android:paddingBottom="40dp">
+            android:paddingStart="20dp"
+            android:paddingTop="45dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="125dp">
 
-            <!-- MOTIONX BRAND -->
+            <!-- ================= HEADER ================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.12"
+                        android:text="M O T I O N  X"
+                        android:textColor="#D66BFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Move. Track. Achieve."
+                        android:textColor="#AAA5C7"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnNotifications"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_header_circle"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="●"
+                    android:textColor="#FF3CA6"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btnProfile"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_profile_circle"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="M"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ================= GREETING ================= -->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="M O T I O N  X"
-                android:textColor="#C79DFF"
-                android:textSize="21sp"
-                android:textStyle="bold"
-                android:letterSpacing="0.12" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Move. Track. Achieve."
-                android:textColor="#A9A4C4"
-                android:textSize="13sp" />
-
-
-            <!-- GREETING -->
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="Good morning,"
-                android:textColor="#C5BFDD"
-                android:textSize="21sp" />
+                android:layout_marginTop="27dp"
+                android:text="Good afternoon,"
+                android:textColor="#CBC7E5"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -66,75 +111,99 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="280dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:text="A stronger, healthier you is just one run away."
-                android:textColor="#E4E0EC"
-                android:textSize="15sp"
-                android:lineSpacingExtra="3dp" />
+                android:layout_marginTop="4dp"
+                android:text="A stronger, healthier you is just one move away."
+                android:textColor="#D3CFE4"
+                android:textSize="14sp" />
 
 
-            <!-- WEATHER / DATE -->
+            <!-- ================= WEATHER ================= -->
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_weather_pill"
+                android:layout_height="56dp"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/bg_weather"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp">
+                android:paddingStart="17dp"
+                android:paddingEnd="17dp">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="☀  18°"
+                    android:text="☀"
+                    android:textColor="#FFD84D"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="18°"
                     android:textColor="#FFFFFF"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.4"
-                    android:gravity="center"
-                    android:text="Johannesburg"
-                    android:textColor="#DDD8EB"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="end"
-                    android:text="Tue, 16 Sep"
-                    android:textColor="#B8B1CF"
+                    android:gravity="center"
+                    android:text="◆  Johannesburg"
+                    android:textColor="#D8D4EA"
                     android:textSize="12sp" />
-
-            </LinearLayout>
-
-
-            <!-- THIS WEEK CARD -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_stats_card"
-                android:orientation="vertical"
-                android:padding="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="THIS WEEK"
-                    android:textColor="#C9A8FF"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.08" />
+                    android:text="Thu, 17 Sep  ›"
+                    android:textColor="#BBB4D7"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+            <!-- ================= THIS WEEK ================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/bg_dashboard_card"
+                android:orientation="vertical"
+                android:padding="19dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.08"
+                        android:text="THIS WEEK"
+                        android:textColor="#F0A7FF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_small_pill"
+                        android:gravity="center"
+                        android:paddingStart="13dp"
+                        android:paddingEnd="13dp"
+                        android:text="Distance  ⌄"
+                        android:textColor="#E5E0F5"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -148,82 +217,71 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="↑  +12%   from last week"
-                    android:textColor="#35E986"
-                    android:textSize="14sp"
+                    android:text="↑  +12% from last week"
+                    android:textColor="#35ED96"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
 
 
-                <!-- MINI WEEK GRAPH -->
+                <!-- GRAPH -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="14dp"
                     android:gravity="bottom"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <View
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="44dp"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="5dp"
-                        android:background="#A62CFF" />
+                        android:background="@drawable/bar_purple" />
 
-                    <TextView
+                    <View
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="68dp"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="5dp"
-                        android:background="#397BFF" />
+                        android:background="@drawable/bar_blue" />
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="32dp"
-                        android:layout_weight="1"
-                        android:layout_marginHorizontal="5dp"
-                        android:background="#6E35D8" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="60dp"
-                        android:layout_weight="1"
-                        android:layout_marginHorizontal="5dp"
-                        android:background="#C23CFF" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_weight="1"
-                        android:layout_marginHorizontal="5dp"
-                        android:background="#FF36C8" />
-
-                    <TextView
+                    <View
                         android:layout_width="0dp"
                         android:layout_height="52dp"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="5dp"
-                        android:background="#833DFF" />
+                        android:background="@drawable/bar_violet" />
 
-                    <TextView
+                    <View
                         android:layout_width="0dp"
-                        android:layout_height="35dp"
+                        android:layout_height="82dp"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="5dp"
-                        android:background="#397BFF" />
+                        android:background="@drawable/bar_magenta" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="59dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/bar_pink" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="77dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/bar_violet" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/bar_blue" />
 
                 </LinearLayout>
-
-
-                <!-- STATS -->
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="17dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="#332F4D" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -235,201 +293,512 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="🏃  3\nActivities"
-                        android:textColor="#FFFFFF"
-                        android:textSize="13sp"
-                        android:lineSpacingExtra="5dp" />
+                        android:text="M"
+                        android:textColor="#AAA5C7"
+                        android:textSize="9sp" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="◷  1h 42m\nTotal Time"
-                        android:textColor="#FFFFFF"
-                        android:textSize="13sp"
-                        android:lineSpacingExtra="5dp" />
+                        android:text="T"
+                        android:textColor="#AAA5C7"
+                        android:textSize="9sp" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="⚡  5:32/km\nAvg. Pace"
+                        android:text="W"
+                        android:textColor="#AAA5C7"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="T"
+                        android:textColor="#AAA5C7"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="F"
+                        android:textColor="#AAA5C7"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="S"
+                        android:textColor="#AAA5C7"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="S"
+                        android:textColor="#AAA5C7"
+                        android:textSize="9sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="#332C55" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="🏃  3&#10;Activities"
                         android:textColor="#FFFFFF"
-                        android:textSize="13sp"
-                        android:lineSpacingExtra="5dp" />
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="◷  1h 42m&#10;Total Time"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="⚡  5:32/km&#10;Avg. Pace"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
 
-            <!-- =============================== -->
-            <!-- START ACTIVITY HERO -->
-            <!-- =============================== -->
+            <!-- ================= START ACTIVITY ================= -->
 
             <FrameLayout
                 android:id="@+id/startActivityCard"
                 android:layout_width="match_parent"
-                android:layout_height="245dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_start_activity"
-                android:padding="18dp">
+                android:layout_height="235dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_start_card">
 
-                <!-- DECORATIVE MAP / ROUTE FEEL -->
+                <!-- NEW IMAGE -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/motionx_activity_background"
+                    android:contentDescription="MotionX activity background" />
+
+                <!-- DARK OVERLAY -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_activity_overlay" />
+
+                <!-- LEFT MOTTO -->
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="92dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center_vertical"
-                    android:text="╲\n  ╲━━╮\n     ╰━━╲\n          ╲"
-                    android:textColor="#45397BFF"
-                    android:textSize="22sp" />
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:letterSpacing="0.13"
+                    android:text="IT STARTS&#10;WITH YOU&#10;━"
+                    android:textColor="#FFFFFF"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
 
-                <!-- GPS STATUS -->
+                <!-- GPS -->
 
                 <TextView
+                    android:id="@+id/gpsStatus"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:layout_gravity="top|end"
-                    android:background="@drawable/bg_gps_pill"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/bg_gps_ready"
                     android:gravity="center"
                     android:paddingStart="13dp"
                     android:paddingEnd="13dp"
                     android:text="●  GPS READY"
-                    android:textColor="#35E986"
-                    android:textSize="11sp"
+                    android:textColor="#37F29B"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
 
-                <!-- SMALL BRAND MESSAGE -->
-
-                <TextView
-                    android:layout_width="95dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:gravity="center"
-                    android:text="IT STARTS\nWITH YOU"
-                    android:textColor="#D8CCFF"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.15" />
-
-                <!-- BIG START BUTTON -->
+                <!-- MAIN START BUTTON -->
 
                 <TextView
                     android:id="@+id/btnStartActivity"
-                    android:layout_width="165dp"
-                    android:layout_height="165dp"
+                    android:layout_width="158dp"
+                    android:layout_height="158dp"
                     android:layout_gravity="center"
                     android:background="@drawable/bg_start_circle"
                     android:clickable="true"
+                    android:elevation="16dp"
                     android:focusable="true"
                     android:gravity="center"
-                    android:elevation="14dp"
-                    android:text="🏃\n\nSTART\nACTIVITY\n›"
+                    android:text="🏃&#10;START&#10;ACTIVITY&#10;›"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="17sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
             </FrameLayout>
 
 
-            <!-- =============================== -->
-            <!-- ACTIVITY TYPES -->
-            <!-- =============================== -->
+            <!-- ================= ACTIVITY TYPES ================= -->
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="95dp"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <!-- RUN -->
+                android:layout_height="108dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/btnRun"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_marginEnd="6dp"
+                    android:layout_marginEnd="5dp"
                     android:background="@drawable/bg_run_tile"
                     android:clickable="true"
                     android:focusable="true"
                     android:gravity="center"
-                    android:text="🏃\nRUN"
+                    android:text="🏃&#10;&#10;RUN&#10;Hit the road"
                     android:textColor="#FFFFFF"
-                    android:textSize="13sp"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
-
-                <!-- WALK -->
 
                 <TextView
                     android:id="@+id/btnWalk"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
                     android:background="@drawable/bg_walk_tile"
                     android:clickable="true"
                     android:focusable="true"
                     android:gravity="center"
-                    android:text="🚶\nWALK"
+                    android:text="🚶&#10;&#10;WALK&#10;Take it easy"
                     android:textColor="#FFFFFF"
-                    android:textSize="13sp"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
-
-                <!-- CYCLE -->
 
                 <TextView
                     android:id="@+id/btnCycle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
                     android:background="@drawable/bg_cycle_tile"
                     android:clickable="true"
                     android:focusable="true"
                     android:gravity="center"
-                    android:text="🚴\nCYCLE"
+                    android:text="🚴&#10;&#10;CYCLE&#10;Explore more"
                     android:textColor="#FFFFFF"
-                    android:textSize="13sp"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
-
-                <!-- GYM -->
 
                 <TextView
                     android:id="@+id/btnGym"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginStart="5dp"
                     android:background="@drawable/bg_gym_tile"
                     android:clickable="true"
                     android:focusable="true"
                     android:gravity="center"
-                    android:text="🏋\nGYM"
+                    android:text="🏋&#10;&#10;GYM&#10;Get stronger"
                     android:textColor="#FFFFFF"
-                    android:textSize="13sp"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
 
+            </LinearLayout>
 
-            <TextView
+
+            <!-- ================= WEEKLY GOAL ================= -->
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:gravity="center"
-                android:text="START ACTIVITY COMING NEXT 🔥"
-                android:textColor="#A62CFF"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="17dp"
+                android:background="@drawable/bg_goal_card"
+                android:orientation="vertical"
+                android:padding="19dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WEEKLY GOAL"
+                            android:textColor="#ECA2FF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="18.4 / 25 km"
+                            android:textColor="#FFFFFF"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="74%"
+                        android:textColor="#FF3FC5"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="15dp"
+                    android:max="100"
+                    android:progress="74"
+                    android:progressDrawable="@drawable/bg_goal_progress" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="6.6 km to smash this week's goal 🔥"
+                    android:textColor="#B9B3CF"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+            <!-- ================= RECENT ACTIVITY ================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="RECENT ACTIVITY"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnSeeAllActivities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="See all  ›"
+                    android:textColor="#DB81FF"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recentActivityCard"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/bg_recent_activity"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_recent_icon"
+                    android:gravity="center"
+                    android:text="🏃"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Morning Run"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Sunday • 07:12"
+                        android:textColor="#A8A1C0"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="5.21 km&#10;DISTANCE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:gravity="center"
+                    android:text="27:48&#10;TIME"
+                    android:textColor="#FFFFFF"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:text="›"
+                    android:textColor="#FF4CD2"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
+
+
+    <!-- ================= FIXED BOTTOM NAV ================= -->
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:background="@drawable/bg_bottom_navigation"
+        android:elevation="25dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="⌂&#10;Home"
+            android:textColor="#D66BFF"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/navProgress"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="▥&#10;Progress"
+            android:textColor="#9D97C1"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/navAdd"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_nav_add"
+            android:clickable="true"
+            android:elevation="18dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/navChallenges"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="♜&#10;Challenges"
+            android:textColor="#9D97C1"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="♙&#10;Profile"
+            android:textColor="#9D97C1"
+            android:textSize="10sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

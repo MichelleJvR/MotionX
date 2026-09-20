@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="132dp"
+    android:layout_marginBottom="11dp"
+    android:background="@drawable/bg_group_card"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtGroupIcon"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:background="@drawable/bg_group_icon"
+        android:gravity="center"
+        android:text="🏃"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtGroupCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RUNNING"
+            android:textColor="#E16DFF"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.09" />
+
+        <TextView
+            android:id="@+id/txtGroupName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Johannesburg Runners"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtGroupDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:text="Road runs and weekend sessions."
+            android:textColor="#918AA7"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/txtGroupMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="2,847 members"
+            android:textColor="#C2BDD0"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnJoinGroup"
+        android:layout_width="70dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_group_join"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="JOIN"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#070816">
+
+    <!-- SCROLLING CONTENT -->
+
+    <ScrollView
+        android:id="@+id/settingsScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="45dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="30dp">
+
+            <!-- HEADER -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <TextView
+                    android:id="@+id/btnBack"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:background="@drawable/bg_settings_back"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="‹"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:letterSpacing="0.12"
+                    android:text="SETTINGS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <!-- PROFILE -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_settings_profile"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:background="@drawable/bg_profile_circle"
+                    android:gravity="center"
+                    android:text="M"
+                    android:textColor="#FFFFFF"
+                    android:textSize="29sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Michelle"
+                        android:textColor="#FFFFFF"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="MotionX Athlete"
+                        android:textColor="#BDB6D8"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Move. Track. Achieve."
+                        android:textColor="#817B9D"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_edit_profile"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingStart="13dp"
+                    android:paddingEnd="13dp"
+                    android:text="Edit  ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- ACTIVITY & GOALS -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="9dp"
+                android:letterSpacing="0.11"
+                android:text="ACTIVITY &amp; GOALS"
+                android:textColor="#E995FF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_settings_card"
+                android:orientation="vertical"
+                android:paddingStart="17dp"
+                android:paddingEnd="17dp">
+
+                <TextView
+                    android:id="@+id/rowWeeklyGoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="◎   Weekly Goal                         25 km   ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="39dp"
+                    android:background="#292744" />
+
+                <TextView
+                    android:id="@+id/rowPreferredActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="🏃  Preferred Activity                     Run   ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="39dp"
+                    android:background="#292744" />
+
+                <TextView
+                    android:id="@+id/rowUnits"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="↔   Units                         Kilometres   ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- APP PREFERENCES -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="9dp"
+                android:letterSpacing="0.11"
+                android:text="APP PREFERENCES"
+                android:textColor="#E995FF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_settings_card"
+                android:orientation="vertical"
+                android:paddingStart="17dp"
+                android:paddingEnd="17dp">
+
+                <TextView
+                    android:id="@+id/rowAppearance"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="◐   Appearance                          Dark   ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="39dp"
+                    android:background="#292744" />
+
+                <TextView
+                    android:id="@+id/rowLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="◎   Language                         English   ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- NOTIFICATIONS -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="9dp"
+                android:letterSpacing="0.11"
+                android:text="NOTIFICATIONS"
+                android:textColor="#E995FF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_settings_card"
+                android:orientation="vertical"
+                android:paddingStart="17dp"
+                android:paddingEnd="17dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔔  Activity Reminders"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <Switch
+                        android:id="@+id/switchActivityReminders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="39dp"
+                    android:background="#292744" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="◎   Goal Updates"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <Switch
+                        android:id="@+id/switchGoalUpdates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="39dp"
+                    android:background="#292744" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🏆  Challenge Updates"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <Switch
+                        android:id="@+id/switchChallengeUpdates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- PRIVACY & SECURITY -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="9dp"
+                android:letterSpacing="0.11"
+                android:text="PRIVACY &amp; SECURITY"
+                android:textColor="#E995FF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_settings_card"
+                android:orientation="vertical"
+                android:paddingStart="17dp"
+                android:paddingEnd="17dp">
+
+                <TextView
+                    android:id="@+id/rowLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="◆   Location &amp; GPS                              ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="39dp"
+                    android:background="#292744" />
+
+                <TextView
+                    android:id="@+id/rowPrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="▣   Privacy                                         ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="39dp"
+                    android:background="#292744" />
+
+                <TextView
+                    android:id="@+id/rowChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="◆   Change Password                         ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- SUPPORT -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="9dp"
+                android:letterSpacing="0.11"
+                android:text="SUPPORT"
+                android:textColor="#E995FF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_settings_card"
+                android:orientation="vertical"
+                android:paddingStart="17dp"
+                android:paddingEnd="17dp">
+
+                <!-- FIXED: no question mark at beginning -->
+
+                <TextView
+                    android:id="@+id/rowHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="ⓘ   Help &amp; Support                               ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="39dp"
+                    android:background="#292744" />
+
+                <TextView
+                    android:id="@+id/rowAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:text="ⓘ   About MotionX                             ›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- SIGN OUT -->
+
+            <TextView
+                android:id="@+id/btnSignOut"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_settings_signout"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:letterSpacing="0.08"
+                android:text="SIGN OUT"
+                android:textColor="#FF4C8C"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- VERSION -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="MotionX • Version 1.0.0"
+                android:textColor="#AAA4C4"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:letterSpacing="0.18"
+                android:text="MOVE. TRACK. ACHIEVE."
+                android:textColor="#817A9F"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:background="@drawable/bg_bottom_navigation"
+        android:elevation="25dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="⌂&#10;Home"
+            android:textColor="#9690BC"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/navProgress"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="▥&#10;Progress"
+            android:textColor="#9690BC"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/navAdd"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_nav_add"
+            android:clickable="true"
+            android:elevation="18dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/navChallenges"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="♜&#10;Challenges"
+            android:textColor="#9690BC"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="●&#10;Profile"
+            android:textColor="#D86CFF"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

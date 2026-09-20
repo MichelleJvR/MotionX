@@ -11,24 +11,21 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // BACK BUTTON
-        val btnBack = findViewById<TextView>(R.id.btnBack)
-
-        btnBack.setOnClickListener {
+        // Back to welcome screen
+        findViewById<TextView>(R.id.btnBack).setOnClickListener {
             finish()
         }
 
-        // CREATE ACCOUNT BUTTON
-        val btnCreateAccount =
-            findViewById<TextView>(R.id.btnCreateAccount)
+        // TEMPORARY LOGIN BYPASS
+        // Firebase authentication will be connected later.
+        findViewById<TextView>(R.id.btnSignIn).setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
 
-        btnCreateAccount.setOnClickListener {
-
-            val intent = Intent(
-                this@LoginActivity,
-                RegisterActivity::class.java
-            )
-
+        // Go to registration screen
+        findViewById<TextView>(R.id.btnCreateAccount).setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
     }
